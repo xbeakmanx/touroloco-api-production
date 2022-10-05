@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    },
+    "time": {
+      "type": "string"
+    },
+    "incluye": {
+      "displayName": "food",
+      "type": "component",
+      "repeatable": true,
+      "component": "include.food"
+    },
+    "currency_usd": {
+      "type": "string"
+    },
+    "english": {
+      "type": "boolean",
+      "default": false
+    },
+    "spanish": {
+      "type": "boolean",
+      "default": true
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "meeting_spot": {
+      "type": "text"
+    },
+    "meeting_spot_description": {
+      "type": "text"
+    },
+    "leaving_hour": {
+      "type": "time",
+      "default": "06:00"
+    },
+    "arriving_hour": {
+      "type": "time",
+      "default": "07:30"
+    },
+    "rules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rule.rule"
+    },
+    "additional_rules": {
+      "type": "richtext"
+    },
+    "value": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invalid_dates",
+  "info": {
+    "singularName": "invalid-date",
+    "pluralName": "invalid-dates",
+    "displayName": "Invalid Date"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::experience.experience"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

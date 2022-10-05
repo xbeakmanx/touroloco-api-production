@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::experience.experience"
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "efectivo",
+        "tarjeta_credito"
+      ]
+    },
+    "reservation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reservation.reservation"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Pago"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_include_foods",
+  "info": {
+    "displayName": "food",
+    "icon": "utensils",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::icon.icon"
+    }
+  }
+}

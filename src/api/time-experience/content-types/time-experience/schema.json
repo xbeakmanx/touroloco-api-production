@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_experiences",
+  "info": {
+    "singularName": "time-experience",
+    "pluralName": "time-experiences",
+    "displayName": "Time Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::experience.experience"
+    }
+  }
+}
