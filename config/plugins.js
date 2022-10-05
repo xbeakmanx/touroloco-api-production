@@ -1,4 +1,26 @@
 module.exports = ({ env }) => ({
+  "rest-cache": {
+    config: {
+      provider: {
+        name: "memory",
+        options: {
+          max: 32767,
+          maxAge: 3600,
+        },
+      },
+      strategy: {
+        contentTypes: [
+          // list of Content-Types UID to cache
+          "api::city.city",
+          "api::experience.experience",
+          "api::invalid-date.invalid-date",
+          "api::payment.payment",
+          "api::reservation.reservation",
+          "api::time-experience.time-experience",
+        ],
+      },
+    },
+  },
   "users-permissions": {
     config: {
       jwtSecret: env("JWT_SECRET"),
