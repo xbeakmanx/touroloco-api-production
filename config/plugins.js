@@ -50,4 +50,16 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: "sendgrid",
+      providerOptions: {
+        apiKey: env("SENDGRID_API_KEY"),
+      },
+      settings: {
+        defaultFrom: "tourolocoapp@gmail.com",
+        defaultReplyTo: "tourolocoapp@gmail.com",
+      },
+    },
+  },
 });
