@@ -1,5 +1,5 @@
 module.exports = {
-  index: async (ctx) => {
+  email: async (ctx) => {
     await strapi.plugins["email"].services.email.send({
       to: "tourolocoapp@gmail.com",
       from: "tourolocoapp@gmail.com",

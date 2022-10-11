@@ -3,7 +3,7 @@ module.exports = {
     {
       method: "GET",
       path: "/email",
-      handler: "email.index",
+      handler: "email.email",
       config: { policies: [] },
     },
   ],
