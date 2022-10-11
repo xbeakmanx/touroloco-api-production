@@ -1,7 +1,7 @@
 module.exports = {
   email: async (ctx) => {
     await strapi.plugins["email"].services.email.send({
-      to: "tourolocoapp@gmail.com",
+      to: "jhonjgarciac1@gmail.com",
       from: "tourolocoapp@gmail.com",
       replyTo: "tourolocoapp@gmail.com",
       subject: "Reserva Confirmada",
